@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/index.css">
+</head>
+<body>
+    <div  id="card" class="cd">
+    <h1>Counter App &#x2764;&#xFE0F;</h1>
+    <h2 id="Display">0</h2>
+<button onclick=" inc()" id="Incrase">+Incrase</button>
+ <button onclick="Re()" id="Reset">Reset</button>
+<button onclick=" Dec()" id="Decrase">-Decrase</button>
+   
+   <script>
+    let card = document.getElementById("card")
+let display=document.getElementById("Display")
+let  =document.getElementById("Incrase")
+let reset =document.getElementById("Reset")
+let decrase =document.getElementById("Decrase")
+
+let num = 0;
+
+function inc(){
+num++
+display.innerText=num
+let co =randomColor()
+card.style.backgroundColor=co
+}
+
+function Dec(){
+num--
+display.innerText=num
+let co =randomColor()
+card.style.backgroundColor=co
+}
+function Re(){
+num=0;
+display.innerText=num
+let co =randomColor()
+card.style.backgroundColor="white"
+}
+function randomColor(){
+    let r = Math.floor(Math.random()*256)
+    let g = Math.floor(Math.random()*256)
+    let b = Math.floor(Math.random()*256)
+    return(`rgb(${r},${g},${b})`)
+
+}
+</script>
+    
+  </div>
+</body>
+</html>
+
+
+
